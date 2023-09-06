@@ -47,7 +47,7 @@ def factorial(n: int) -> int:
         n -= 1
     return result
 
-
+T = TypeVar("T")
 
 def every_other(lst: List[T]) -> List[T]:
     """Takes a list and returns a list of every other element in the list, starting with
