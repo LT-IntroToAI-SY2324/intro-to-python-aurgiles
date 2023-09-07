@@ -76,7 +76,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    sl = 0
+    for num in lst:
+        sl += num
+    return sl
 
 
 def mean(lst: List[int]) -> float:
