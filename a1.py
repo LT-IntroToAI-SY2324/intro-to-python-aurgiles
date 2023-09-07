@@ -91,7 +91,12 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    mn = 0
+    for n in lst:
+        mn += n
+    
+    mn = mn / len(lst)
+    return mn
 
 
 def median(lst: List[int]) -> float:
