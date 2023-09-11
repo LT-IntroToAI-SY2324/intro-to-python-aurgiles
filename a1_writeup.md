@@ -19,7 +19,7 @@ I was a bit intimidated since I haven't used python before, just java in my soph
 
 2. Describe some similarities and differences that you found between python and other programming languages you have used in the past?
 
-a difference is python doesnt require parenthesis or semicolons and a similarity I found is the loops.
+a difference is python doesnt require parenthesis or semicolons (requires less procedures) and a similarity I found is the usuge of loops. 
 
 3. What are some things that you learned through this assignment?
 
