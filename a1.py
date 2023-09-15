@@ -25,7 +25,10 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n < 0:
+        return n*-1
+    else:
+        return n
 
 
 def factorial(n: int) -> int:
@@ -38,11 +41,13 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
-
+    result = 1
+    while n > 1:
+        result = result * n
+        n -= 1
+    return result
 
 T = TypeVar("T")
-
 
 def every_other(lst: List[T]) -> List[T]:
     """Takes a list and returns a list of every other element in the list, starting with
@@ -55,7 +60,10 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    result = []
+    for i in range(0, len(lst), 2):
+        result.append(lst[i])
+    return result
 
 
 def sum_list(lst: List[int]) -> int:
@@ -68,7 +76,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    sl = 0
+    for num in lst:
+        sl += num
+    return sl
 
 
 def mean(lst: List[int]) -> float:
@@ -80,7 +91,12 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    mn = 0
+    for n in lst:
+        mn += n
+    
+    mn = mn / len(lst)
+    return mn
 
 
 def median(lst: List[int]) -> float:
@@ -95,7 +111,16 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    n = len(lst)
+
+    mid = n // 2
+
+    if n % 2 == 1:
+        return lst[mid]
+    else:
+        fi = lst[mid - 1]
+        se = lst[mid]
+        return (fi + se) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -117,7 +142,15 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    index = 0
+
+    while len(lst) > 2:
+        for i in range(2):
+            index = (index + 1) % len(lst)
+        
+        remove = lst.pop(index)
+
+    return lst
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
